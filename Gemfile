@@ -44,6 +44,11 @@ group :development, :test do
 end
 
 gem 'haml-rails'
-gem 'minitest-rails'
 gem 'bootstrap-sass'
+gem 'pry-rails'
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'minitest-rails'
+end
 
