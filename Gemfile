@@ -24,6 +24,10 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  gem 'html2haml'
+end
+
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'pry-rails'
