@@ -1,14 +1,8 @@
 %h1 Listing polls
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th
-      %th
-      %th
+%ul
 
-  %tbody
+  %li
     - @polls.each do |poll|
       %tr
         %td= poll.title
