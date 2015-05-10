@@ -11,6 +11,13 @@
     = f.text_field :title, class: "form-control"
   %p
     = f.label :kind
-    = f.text_field :kind, class: "form-control"
+
+  .radio
+    -@kind_options.each do |option|
+      %label
+        =f.radio_button :kind, option[1]
+        = option[0]
+        / = option[0,1]
+
   %p
     = f.submit 'Save', class: "btn btn-primary"
