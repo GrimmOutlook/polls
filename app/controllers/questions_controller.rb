@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
 
 
   def create
-    @question = Question.new(question_params)
+    @question = @poll.questions.build(question_params)
 
     respond_to do |format|
       if @question.save
