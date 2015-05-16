@@ -9,8 +9,9 @@
   %p
     = f.label :title
     = f.text_field :title, class: "form-control"
+
   %p
-    = f.label :kind
+    %label What kind of question?
 
   .radio
     -@kind_options.each do |option|
@@ -18,10 +19,12 @@
         = f.radio_button :kind, option[1]
         = option[0]
 
-  =f.fields_for :possible_answers do |c|
+  %p
+    %label Specify some choices:
+
+  = f.fields_for :possible_answers do |c|
     %p
-      List Possible Answers:
-      =c.text_field :title
+      = c.text_field :title, placeholder: "Type your choice", class: "form-control"
 
   %p
     = f.submit 'Save', class: "btn btn-primary"
