@@ -15,8 +15,13 @@
   .radio
     -@kind_options.each do |option|
       %label
-        =f.radio_button :kind, option[1]
+        = f.radio_button :kind, option[1]
         = option[0]
+
+  =f.fields_for :possible_answers do |c|
+    %p
+      List Possible Answers:
+      =c.text_field :title
 
   %p
     = f.submit 'Save', class: "btn btn-primary"
